@@ -1,0 +1,20 @@
+<div class="container-fluid row">
+  <div class="col-lg-2 col-md-1 col-sm-0 col-0"></div>
+  <div class="col-lg-8 col-md-10 col-sm-12 col-12">
+    <h1>הצטרפות לקופות גמל</h1>
+    <div class="steps">
+      <div *ngFor="let step of steps; let ind = index" class="step"
+           [ngClass]="{active: step.isActive, pad: ind===0}" (click)="changeActive(ind)">
+        <div class="circle" [ngClass]="{white: step.isActive}">{{ind+1}}</div>
+        <span [ngClass]="{hidden: !step.isActive}">{{step.name}}</span>
+        <div class="triangle" *ngIf="step.isActive"></div>
+      </div>
+    </div>
+    <app-info></app-info>
+    <div class="footer">
+      <span class="space"></span>
+      <span class="but">המשך</span>
+    </div>
+  </div>
+  <div class="col-lg-2 col-md-1 col-sm-0 col-0"></div>
+</div>

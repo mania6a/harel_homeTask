@@ -1,0 +1,53 @@
+<div class="cont">
+  <div class="side col-sm-3">בחירת מסלול השקע
+    <span class="space"></span>
+    <i class="fas fa-chevron-up resp" (click)="hide()"></i>
+  </div>
+  <div class="col-sm-9 main">
+    <div class="header">
+      <span>באפשרות לבחור את המסלול שבו ישוקע הכסף שלך, על פי צרכיך ומידת הסיכון המתאימה לך.</span>
+      <span class="space"></span>
+      <i class="fas fa-chevron-up" (click)="hide()"></i>
+    </div>
+    <div class="body" [@body]="state">
+      <hr>
+      <div class="subTitle">
+      <div class="done" (click)="choose()"><i class="fas fa-check" [ngClass]="{visible: !chosed}"></i></div>
+      <span>אני מעוניין לפצל את החיכסון שלי בין מסלולים שונים (תוכל לבצע פעולה זו בהמשך התהחיך)</span>
+    </div>
+      <div class="details">
+      <div class="form-group col-md-4 col-sm-12">
+        <label for="select" class="title">מסלול השקעה לבחירתך</label>
+        <div class="select">
+        <select name="" id="select" class="form-control">
+          <option>מסלול כללי - 3.07% שנתי</option>
+        </select>
+        <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+      <div class="form-group col-md-4 col-sm-12 name">
+        <label for="name" class="title"> שם פרטי<span class="star">*</span></label>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <div class="form-group col-md-4 col-sm-12 name">
+        <label for="lastName" class="title"> שם משפחה<span class="star">*</span></label>
+        <input type="text" class="form-control" id="lastName">
+      </div>
+    </div>
+      <div class="pad" >
+      <p class="title">עבור מי הפטליסה?</p>
+      <div class="checks">
+        <div *ngFor="let radio of radios" class="chrckRow">
+          <div class="radio" [ngClass]="{checked: radio.isRadio}" (click)="changeRadio(radio)"></div>
+          <span class="subTitle">{{radio.name}}</span>
+        </div>
+      </div>
+      <hr class="bottom">
+      <div class="footer">
+        <p>למידע נוסף על מסלולי ההשקעה</p>
+        <i class="fas fa-chevron-left"></i>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

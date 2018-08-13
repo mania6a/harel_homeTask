@@ -1,0 +1,24 @@
+.container-fluid{
+  height: 8vh;
+  background: rgb(0, 64, 128);
+  align-items: center;
+  overflow: hidden;
+}
+.space{
+  flex: 1 1 auto;
+}
+img{
+  width: 80px;
+}
+.menu, .container-fluid{
+  display: flex;
+}
+.item{
+  color: #f9ffff;
+  padding: 0px 2vw 0px 1.5vw;
+  font-weight: bold;
+  align-self: baseline;
+}
+.item:not(:last-child){
+  border-left: 1px solid #4d8dcd;
+}

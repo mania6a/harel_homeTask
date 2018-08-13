@@ -168,14 +168,4 @@ hr.bottom{
     margin-top: 0px;
   }
 }
-.body{
-  max-height: 80vh;
-}
-@keyframes hide {
-  from {height: initial}
-  to {height: 0px}
-}
-.hide{
-  animation-name: hide;
-  animation-duration: 1000ms;
-}
+

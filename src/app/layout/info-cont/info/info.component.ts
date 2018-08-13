@@ -53,7 +53,6 @@ export class InfoComponent implements OnInit {
 
   choose(){
     this.chosed = !this.chosed;
-    console.log(this.chosed);
   }
 
   changeRadio(radio) {

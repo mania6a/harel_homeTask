@@ -22,3 +22,6 @@ img{
 .item:not(:last-child){
   border-left: 1px solid #4d8dcd;
 }
+.col-0, .col-12{
+  padding: 0px  ;
+}
